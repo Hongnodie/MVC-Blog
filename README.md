@@ -21,9 +21,7 @@
 
   This app has already been deployed in heroku (https://www.heroku.com/) - A free platform to deploy any front and back end github app. Therefore, open the following link, you will be able to use it:
 
-  ```
-  npm i 
-  ```
+  [Live page powered by heroku](https://drive.google.com/file/d/1HJlikODcMRR1V6zYQyo2iGY91Jqb36VA/view) <br>
 
   See feature video at [MVC-Blog feature video](https://drive.google.com/file/d/1HJlikODcMRR1V6zYQyo2iGY91Jqb36VA/view) <br>
   
