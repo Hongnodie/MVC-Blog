@@ -2,6 +2,8 @@
 const express = require('express');
 // saving the exported controller modules as an object called router
 const router = require('./Controllers');
+// Apply nodejs.path to attach dynamic file path
+const path = require('path');
 
 // Build connection by pool, explained and sampled at https://sequelize.org/docs/v6/other-topics/connection-pool/
 const sequelize = require('./Config/Connection');
@@ -13,6 +15,9 @@ const app = express();
 // Add middleware before we do "app.use()"
 // Use middleware method explained at https://expressjs.com/en/guide/routing.html
 app.use(session(sess));
+
+// TODO: explained further
+app.use(express.static(path.join(__dirname, 'Public')));
 
 // correspond to express-routing in controller folder 
 app.use(router);
