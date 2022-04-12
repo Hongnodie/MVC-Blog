@@ -11,3 +11,11 @@ app.use(session(sess));
 
 // correspond to express-routing in controller folder 
 app.use(router);
+
+// Coupled with model to create such stances (frames) in database
+// Sample provided in https://sequelize.org/docs/v6/core-concepts/model-basics/
+// use "{ force: true }" to create table and drop it first if it already existed
+sequelize.sync({ force: true })
+    .then(() => {
+        app.listen(PORT, () => console.log(`Now listening at http://localhost:${PORT}`));
+    });
