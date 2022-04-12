@@ -13,6 +13,7 @@ class User extends Model {
 User.init(
     {
         username: {
+            // Datatype looked up at https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types
             type: DataTypes.STRING,
             allowNull: false,
         },
