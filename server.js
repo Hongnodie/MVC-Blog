@@ -3,6 +3,10 @@ const express = require('express');
 // saving the exported controller modules as an object called router
 const router = require('./Controllers');
 
+// Build connection by pool, explained and sampled at https://sequelize.org/docs/v6/other-topics/connection-pool/
+const sequelize = require('./Config/Connection');
+
+
 // Utilizing express by coupled with "express = require('express');"
 const app = express();
 
