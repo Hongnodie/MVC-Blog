@@ -10,7 +10,8 @@ const sequelize = require('./Config/Connection');
 // Utilizing express by coupled with "express = require('express');"
 const app = express();
 
-// Use middleware sequelize.session. method explained at https://expressjs.com/en/guide/routing.html
+// Add middleware before we do "app.use()"
+// Use middleware method explained at https://expressjs.com/en/guide/routing.html
 app.use(session(sess));
 
 // correspond to express-routing in controller folder 
@@ -21,5 +22,5 @@ app.use(router);
 // use "{ force: true }" to create table and drop it first if it already existed
 sequelize.sync({ force: true })
     .then(() => {
-        app.listen(PORT, () => console.log(`Now listening at http://localhost:${PORT}`));
+        app.listen(PORT, () => console.log(`Server listening on http://localhost:${PORT}`));
     });
