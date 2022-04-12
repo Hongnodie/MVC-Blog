@@ -9,5 +9,5 @@ const app = express();
 // Use middleware sequelize.session. method explained at https://expressjs.com/en/guide/routing.html
 app.use(session(sess));
 
-// correspond to express-routing in controller folder
+// correspond to express-routing in controller folder 
 app.use(router);
