@@ -1,5 +1,7 @@
 // Introduce sequelize first
 const Sequelize = require('sequelize');
+// add dotenv, documented at https://www.npmjs.com/package/dotenv
+require('dotenv').config();
 
 // init an object to be exported to server.js
 let sequelize;
