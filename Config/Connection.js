@@ -6,13 +6,13 @@ require('dotenv').config();
 // init an object to be exported to server.js
 let sequelize;
 
-// if deployed at heroku (means http://*heroku*), connect to JAWSDB_URL
+// if deployed at heroku (means http://*heroku*), connect to "JAWSDB_URL"
 // Explained in heroku https://devcenter.heroku.com/articles/jawsdb and in sequelize https://sequelize.org/docs/v6/getting-started/
 if (process.env.JAWSDB_URL) {
     sequelize = new Sequelize(process.env.JAWSDB_URL);
 } 
 // if deployedon local, due to test need, set up the environment variables to connect to mysql as required
-// Could understand from https://www.npmjs.com/package/sequelize-connect yet not sure if merged to sequelize
+// Understand from https://www.npmjs.com/package/sequelize-connect yet not sure if this package has been merged into sequelize during update or not, cause they look so relevant
 else {
     sequelize = new Sequelize(
         process.env.DB_NAME,
