@@ -16,7 +16,7 @@ const app = express();
 // Use middleware method explained at https://expressjs.com/en/guide/routing.html
 app.use(session(sess));
 
-// TODO: explained further
+// "__dirname" is local object introduced by every single nodejs module, can be replaced by process.cwd() (need to import "process" module), or "./" explained at https://nodejs.org/docs/latest/api/modules.html#__dirname
 app.use(express.static(path.join(__dirname, 'Public')));
 
 // correspond to express-routing in controller folder 
